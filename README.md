@@ -1,6 +1,8 @@
 # Neu : Neumorphism Styles Generator
 
 Welcome to Neu. This is a small library which lets you generate Neumorphism styles for your JS application, just with the input of a color.
+To install from npm:
+<pre>npm install neu-js</pre>
 The only required parameter for Neu is hue, which defines which color should everything be based on.
 <br>
 To initialize the generator:
