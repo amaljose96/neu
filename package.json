@@ -1,6 +1,6 @@
 {
   "name": "neu-js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Basic style generater for neumorphism UX",
   "main": "neu.js",
   "scripts": {

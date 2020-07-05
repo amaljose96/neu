@@ -62,3 +62,7 @@ The other parameters are:
   </li>
  </ul>
   
+## Release Notes:
+
+### 1.0.2:
+Basic version with updated Readme, outset, inset, button and dropdown released.
