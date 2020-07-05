@@ -264,3 +264,4 @@ function Neu(parameters = {}) {
     }
   };
 }
+module.exports = Neu;

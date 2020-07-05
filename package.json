@@ -1,0 +1,24 @@
+{
+  "name": "neu-js",
+  "version": "1.0.1",
+  "description": "Basic style generater for neumorphism UX",
+  "main": "neu.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amaljose96/neu.git"
+  },
+  "keywords": [
+    "styles",
+    "css",
+    "js"
+  ],
+  "author": "Amal Jose",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amaljose96/neu/issues"
+  },
+  "homepage": "https://github.com/amaljose96/neu#readme"
+}
