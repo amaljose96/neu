@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <title>Neu : Generator for Neumorphism Styles</title>
+        <style>
+            body{
+                background-color:#f7f2ff;
+                color:#b19cd1;
+            }
+            button{
+                margin:20px;
+            }
+            select{
+                margin:20px;
+            }
+        </style>
+    </head>
+    <body id="body">
+        <h1>Neu : Neumorphism Styles Generator</h1>
+        <p>Welcome to Neu. This is a small library which lets you generate Neumorphism styles for your JS application, just with the input of a color.</p>
+        <br>
+        <p>The only required parameter for Neu is hue, which defines which color should everything be based on.</p>
+        <p>The other parameters are:</p>
+        <ul>
+            <li>Background Color: This would override the hue sent. The hue would be selected based on this.</li>
+            <li>Text Color: This would override the text color determined by the hue.</li>
+            <li>Primary Color: This would override the primary color determined by the hue.</li>
+            <li>Contrast: The contrast between the light and dark shade used in elements.</li>
+            <li>Border Radius: The border radius for elements.</li>
+        </ul>
+        <h4>
+            Button Styles are as follows:
+            <button id="button0">Primary Button</button>
+            <button id="button1">Button Level 1</button>
+            <button id="button2">Button Level 2</button>
+            <button id="button3">Button Level 3</button>
+            <button id="button4">Button Disabled</button>
+        </h4>
+        <h4>
+            Select/Dropdown styles are as follows:
+            <select id="select1">
+                <option>First Dropdown option at level 1</option>
+                <option>Second Dropdown option at level 1</option>
+            </select>
+            <select id="select2">
+                <option>First Dropdown option at level 2</option>
+                <option>Second Dropdown option at level 2</option>
+            </select>
+            <select id="select3" disabled>
+                <option>First Disabled Dropdown option</option>
+                <option>Second Disabled Dropdown option</option>
+            </select>
+        </h4>
+        
+        <script src="neu.js"></script>
+        <script>
+            var neuStyles= Neu();
+            document.getElementById("body").style=neuStyles.body();
+            function addButtonStyles(selector,parameters){
+                document.getElementById(selector).style=neuStyles.button(parameters).style();
+                document.getElementById(selector).onmouseenter=()=>{
+                    document.getElementById(selector).style = neuStyles.button(parameters).hover();
+                }
+                document.getElementById(selector).onmouseleave=()=>{
+                    document.getElementById(selector).style = neuStyles.button(parameters).style();
+                }
+                document.getElementById(selector).onmousedown=()=>{
+                    document.getElementById(selector).style = neuStyles.button(parameters).active();
+                }
+                document.getElementById(selector).onmouseup=()=>{
+                    document.getElementById(selector).style = neuStyles.button(parameters).style();
+                }
+            }
+            addButtonStyles("button0",{type:"primary"});
+            addButtonStyles("button1",{level:1});
+            addButtonStyles("button2",{level:2});
+            addButtonStyles("button3",{level:3});
+            addButtonStyles("button4",{disabled:true});
+
+            function addSelectStyles(selector,parameters){
+                document.getElementById(selector).style=neuStyles.dropdown(parameters).style();
+            }
+            addSelectStyles("select1",{level:1});
+            addSelectStyles("select2",{level:2});
+            addSelectStyles("select3",{disabled:true});
+           
+        </script>
+    </body>
+</html>
