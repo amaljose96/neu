@@ -237,7 +237,7 @@ function Neu(parameters = {}) {
         disabled = disabled || false;
         return {
             style:()=>{
-                let basicStyles = basics.inset(level * 3);
+                let basicStyles = basics.inset(level);
                 return `${basicStyles};
                   padding:10px 20px;
                   transition: all 0.2s;
@@ -247,6 +247,18 @@ function Neu(parameters = {}) {
                       ? darkShade
                       : textColor
                   };`;
+            },
+            hover:()=>{
+                let hoverStyles = basics.inset(level*2);
+                return `${hoverStyles};
+                padding:10px 20px;
+                transition: all 0.2s;
+                cursor: ${disabled ? "not-allowed" : "pointer"};
+                color:${
+                  disabled
+                    ? darkShade
+                    : textColor
+                };`;
             }
         }
     }

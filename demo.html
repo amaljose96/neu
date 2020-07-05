@@ -78,6 +78,12 @@
 
             function addSelectStyles(selector,parameters){
                 document.getElementById(selector).style=neuStyles.dropdown(parameters).style();
+                document.getElementById(selector).onmouseenter=()=>{
+                    document.getElementById(selector).style = neuStyles.dropdown(parameters).hover();
+                }
+                document.getElementById(selector).onmouseleave=()=>{
+                    document.getElementById(selector).style = neuStyles.dropdown(parameters).style();
+                }
             }
             addSelectStyles("select1",{level:1});
             addSelectStyles("select2",{level:2});
